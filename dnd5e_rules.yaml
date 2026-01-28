@@ -1,0 +1,168 @@
+single:
+  Character Name: "character/name"
+  Race: "character/race"
+  Max HP: "character/hp/total"
+  Current HP: "character/hp/current"
+  Temp HP: "character/hp/temporary"
+  Armor Class: "character/defenses/ac/total"
+  Strength: "character/abilities/strength/score"
+  Strength Modifier: "character/abilities/strength/bonus"
+  Dexterity: "character/abilities/dexterity/score"
+  Dexterity Modifier: "character/abilities/dexterity/bonus"
+  Constitution: "character/abilities/constitution/score"
+  Constitution Modifier: "character/abilities/constitution/bonus"
+  Intelligence: "character/abilities/intelligence/score"
+  Intelligence Modifier: "character/abilities/intelligence/bonus"
+  Wisdom: "character/abilities/wisdom/score"
+  Wisdom Modifier: "character/abilities/wisdom/bonus"
+  Charisma: "character/abilities/charisma/score"
+  Charisma Modifier: "character/abilities/charisma/bonus"
+  
+  Age: "character/age"
+  Height: "character/height"
+  Weight: "character/weight"
+  Gender: "character/gender"
+  Alignment: "character/alignment"
+  Experience: "character/exp"
+  Next Level XP: "character/expneeded"
+  Background: "character/background"
+  Initiative: "character/initiative/total"
+  Speed: "character/speed/total"
+  
+  # Saving Throws
+  Strength Save: "character/abilities/strength/save"
+  Strength Save Prof: "character/abilities/strength/saveprof"
+  Dexterity Save: "character/abilities/dexterity/save"
+  Dexterity Save Prof: "character/abilities/dexterity/saveprof"
+  Constitution Save: "character/abilities/constitution/save"
+  Constitution Save Prof: "character/abilities/constitution/saveprof"
+  Intelligence Save: "character/abilities/intelligence/save"
+  Intelligence Save Prof: "character/abilities/intelligence/saveprof"
+  Wisdom Save: "character/abilities/wisdom/save"
+  Wisdom Save Prof: "character/abilities/wisdom/saveprof"
+  Charisma Save: "character/abilities/charisma/save"
+  Charisma Save Prof: "character/abilities/charisma/saveprof"
+
+# 2. Iterative List Extractions
+# Usage: Finds a container, iterates over children matching a pattern, 
+# and extracts multiple fields from each child.
+lists:
+  - name: "Classes"
+    container: "character/classes"
+    item_pattern: "id-"
+    required_field: "Class"
+    fields:
+      Class: "name"
+      Level: "level"
+      Subclass: "specialization"
+      HitDice: "hddie"
+      SpellAbility: "spellability"
+
+  - name: "Weapons"
+    container: "character/weaponlist"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+      Magic Bonus: "bonus"
+      Mastery: "mastery"
+      Proficient: "prof"
+      Stat: "attackstat"
+      Properties: "properties"
+      Critical: "critrange"
+      DamageData:
+        type: "subtree"
+        path: "damagelist"
+      Damage: "damage" # Fallback if damagelist is empty or for direct string
+      Properties: "properties"
+
+  - name: "Currency"
+    container: "character/coins"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+      Amount: "amount"
+
+  - name: "Skills"
+    container: "character/skilllist"
+    item_pattern: "id-"
+    required_field: "Skill"
+    fields:
+      Skill: "name"
+      Total: "total"
+      Proficiency: "prof"
+      Stat: "stat"
+
+  - name: "Feats"
+    container: "character/featlist"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+
+  - name: "Class Features"
+    container: "character/featurelist"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+      Level: "level"
+
+  - name: "Racial Traits"
+    container: "character/traitlist"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+
+  - name: "Proficiencies"
+    container: "character/proficiencylist"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+
+  - name: "Languages"
+    container: "character/languagelist"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+
+  - name: "Inventory"
+    container: "character/inventorylist"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+      Count: "count"
+      Weight: "weight"
+      Location: "location"
+
+  - name: "Spells & Powers"
+    container: "character/powers"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+      Level: "level"
+      Group: "group"
+      School: "school"
+      Cast: "castingtime"
+      Range: "range"
+      Duration: "duration"
+      Save: "save"
+      Description: "description"
+      actions:
+        type: "subtree"
+        path: "actions"
+
+  - name: "Power Groups"
+    container: "character/powergroup"
+    item_pattern: "id-"
+    required_field: "Name"
+    fields:
+      Name: "name"
+      Stat: "stat"
+      SaveStat: "savestat"

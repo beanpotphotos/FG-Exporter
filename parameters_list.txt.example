@@ -1,0 +1,38 @@
+Parameter Description,XML Path,Extraction Type,List Path,Item Tag,Name Tag,Value Tag
+Character Name,character/name,single,,,,  
+Class,character/classes/id-00001/name,single,,,, 
+Race,character/race,single,,,, 
+Strength Score,character/abilities/strength/score,single,,,, # <<<--- CORRECTED XML Path
+Dexterity Score,character/abilities/dexterity/score,single,,,, # <<<--- CORRECTED XML Path
+Constitution Score,character/abilities/constitution/score,single,,,, # <<<--- CORRECTED XML Path
+Intelligence Score,character/abilities/intelligence/score,single,,,, # <<<--- CORRECTED XML Path
+Wisdom Score,character/abilities/wisdom/score,single,,,, # <<<--- CORRECTED XML Path
+Charisma Score,character/abilities/charisma/score,single,,,, # <<<--- CORRECTED XML Path
+Armor Class,character/defenses/ac/total,single,,,, # <<<--- CORRECTED XML Path
+Hit Points,character/hp/total,single,,,, # <<<--- CORRECTED XML Path
+Classes,classes,list_iterative,classes,id-,name,level,specialization 
+Levels,classes,list_iterative,classes,id-,name,level,specialization  
+Strength Save,character/abilities/strength/save,single,,,, # <<<--- CORRECTED XML Path
+Dexterity Save,character/abilities/dexterity/save,single,,,, # <<<--- CORRECTED XML Path
+Constitution Save,character/abilities/constitution/save,single,,,, # <<<--- CORRECTED XML Path
+Intelligence Save,character/abilities/intelligence/save,single,,,, # <<<--- CORRECTED XML Path
+Wisdom Save,character/abilities/wisdom/save,single,,,, # <<<--- CORRECTED XML Path
+Charisma Save,character/abilities/charisma/save,single,,,, # <<<--- CORRECTED XML Path
+Perception Skill,skilllist,list_iterative,skilllist,id-,name,total  
+Arcana Skill,skilllist,list_iterative,skilllist,id-,name,total      
+Persuasion Skill,skilllist,list_iterative,skilllist,id-,name,total  
+Nature Skill,skilllist,list_iterative,skilllist,id-,name,total      
+Medicine Skill,skilllist,list_iterative,skilllist,id-,name,total    
+Survival Skill,skilllist,list_iterative,skilllist,id-,name,total    
+Performance Skill,skilllist,list_iterative,skilllist,id-,name,total 
+Acrobatics Skill,skilllist,list_iterative,skilllist,id-,name,total  
+Religion Skill,skilllist,list_iterative,skilllist,id-,name,total    
+Athletics Skill,skilllist,list_iterative,skilllist,id-,name,total  
+Sleight of Hand Skill,skilllist,list_iterative,skilllist,id-,name,total 
+Insight Skill,skilllist,list_iterative,skilllist,id-,name,total    
+Intimidation Skill,skilllist,list_iterative,skilllist,id-,name,total 
+Deception Skill,skilllist,list_iterative,skilllist,id-,name,total    
+Investigation Skill,skilllist,list_iterative,skilllist,id-,name,total 
+Stealth Skill,skilllist,list_iterative,skilllist,id-,name,total      
+History Skill,skilllist,list_iterative,skilllist,id-,name,total      
+Animal Handling Skill,skilllist,list_iterative,skilllist,id-,name,total 

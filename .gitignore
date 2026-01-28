@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / Build
+build/
+dist/
+*.spec
+
+# Virtual Environments
+.env
+.venv
+env/
+venv/
+
+# Project Specific (Test Data)
+*.xml
+*.pdf
+output/
+input FGU characters/
+debug_*.txt
+debug_*.py
+generate_*.py
+verify_*.py
+test_*.pdf
+multiclass_test.pdf
+logo.png
