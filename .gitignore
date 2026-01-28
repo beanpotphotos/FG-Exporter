@@ -1,28 +1,43 @@
-# Python
+# Python Standard
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Distribution / Build
+# Distribution
 build/
 dist/
 *.spec
 
-# Virtual Environments
+# Environments
 .env
 .venv
 env/
 venv/
 
-# Project Specific (Test Data)
+# Antigravity / Working Files
+project_history.md
+task.md
+walkthrough.md
+implementation_plan.md
+.gemini/
+
+# User Data (Input/Output)
 *.xml
 *.pdf
 output/
 input FGU characters/
-debug_*.txt
-debug_*.py
-generate_*.py
-verify_*.py
 test_*.pdf
 multiclass_test.pdf
+
+# Debug & Verification Scripts
+debug_*.py
+debug_*.txt
+verify_*.py
+generate_*.py
+tools/
+
+# Misc
 logo.png
+requirements.txt
+run_gui.bat
+parameters_list.txt.example

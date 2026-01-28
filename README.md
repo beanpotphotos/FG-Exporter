@@ -2,21 +2,16 @@
 
 **A tool to convert Fantasy Grounds Unity (FGU) XML exports into high-fidelity, logic-enriched D&D 5e PDF character sheets.**
 
-![Logo](https://via.placeholder.com/150) *(You can upload your logo.png to the repo and link it here if you like)*
-
-## Description
-This tool solves the "PDF Export" problem for Fantasy Grounds Unity. It parses the raw XML character export, applies D&D 5e specific logic (bonus calculations, spell save DCs, weapon formatting), and generates a clean, printable vector PDF.
-
-It goes beyond simple data dumping by understanding the *semantics* of the D&D 5e ruleset (e.g., separating "Actions" from "Spells", formatting dice strings like `1d6 + 3`, and calculating total attack bonuses).
+## About
+Converts Fantasy Grounds XML files into PDFs or Markdown. It was developed with Google Antigravity as an AI-programming partner. This is a standalone Python executable; no AI is used to convert. It is mostly accurate and functional for D&D 5e data. I'm not a programmer, I just love Fantasy Grounds and D&D.
 
 ## Features
--   **Intelligent Parsing**: Extracts data from standard FGU XML exports.
+-   **Intelligent Parsing**: Extracts data from standard FGU character XML exports.
 -   **Hexagonal Architecture**: Logic is separated from input/output, ensuring accurate math.
 -   **Advanced Damage Calculation**:
     -   Automatically calculates total attack bonuses (Stat + Prof + Magic).
     -   Formats damage strings nicely (e.g., `1d8 + 4 piercing`).
     -   Handles complex magic items and "DamageData" subtrees.
--   **Spellbook Generation**: creates a dedicated "Spells & Magic" page with dynamic pagination.
 -   **modern GUI**: A dark-themed, responsive user interface.
 -   **Dual Output**: Generates both **PDF** (printable) and **Markdown** (text-based) formats.
 
@@ -25,7 +20,7 @@ It goes beyond simple data dumping by understanding the *semantics* of the D&D 5
 ### 1. The Easy Way (Executable)
 1.  Download the latest `FantasyGroundsExporter.exe` from the [Releases](../../releases) page.
 2.  Run the executable.
-3.  Click **Browse XML...** and select your character's `.xml` file (exported from FGU via `/exportchar`).
+3.  Click **Browse XML...** and select your character's `.xml` file (exported from FGU via `/exportchar`) or using the Export Record in the top left of the character sheet.
 4.  Select **dnd5e** as the Logic Engine.
 5.  Click **Generate PDF**.
 
@@ -42,12 +37,6 @@ python gui.py
 # OR Run the CLI
 python main.py -i "my_character.xml" -f pdf
 ```
-
-## Interpreting the Output
-The PDF is designed to be "Action First". 
--   **Page 1**: Core Stats, Skills, and Weapons.
--   **Page 2**: Feature Dump (Class features, Racial traits).
--   **Page 3+**: Spells & Magic Services (if applicable).
 
 ## Disclaimer
 **Beta Software (v0.9)**
